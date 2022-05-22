@@ -1,0 +1,11 @@
+ENSURE YOU HAVE PYTHON 3.6+
+
+Open the Zip file and extract the .py file to its own directory (folder)
+Open the folder in File Explorer (built in file browser)
+Click the top bar which shows the current path (folder), (eg. This PC > Desktop > kit creator) so it all highlights blue
+While it is highlighted type "CMD" (no quotations) and press enter this will open a console
+In the console type "pip install -r requirements.txt" (no quotations) and press enter, this will install required modules for the program to work
+When it is finished installing, type "create.py" to start the program!
+
+//WARNING\\
+any errors in type names, or any input will have to be manually fixed, it does not support rollback to fix your errors!
