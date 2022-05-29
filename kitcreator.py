@@ -1,6 +1,7 @@
 from colorama import init, Fore as cc
 from os import name as os_name, system
 import os
+import shutil
 #created by Xal Sef'Koj Komtaree
 init()
 dr = DR = r = R = cc.LIGHTRED_EX
@@ -89,14 +90,16 @@ if trucks.lower() == "y":
 		</children>
 	</event>
             '''
+if os.path.isdir(f"{name}"):
+    shutil.rmtree(f'{name}')
 os.mkdir(f"{name}")
 with open(f"{name}\\{name}event.txt", "w") as f:
     f.write(f"{event}")
     f.close()
 clear()
-coordsX = input(f"{y}Created by Xal Sef'Koj Komtaree\n{b}Input Full X Coordinates > {y}")
-coordsY = input(f"{b}Input Full Z Coordinates > {y}")
-coordsA = input(f"{b}Input Full A Coordinates (Rotation, default is 113.00) > {y}")
+coordsX = input(f"{y}Created by Xal Sef'Koj Komtaree\n{b}Input Full X Coordinates (NPC) > {y}")
+coordsY = input(f"{b}Input Full Z Coordinates (NPC) > {y}")
+coordsA = input(f"{b}Input Full A Coordinates (Rotation, default is 113.00) (NPC) > {y}")
 if not coordsA:
     coordsA = "113.00"
 coords = f'''
