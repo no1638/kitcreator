@@ -90,7 +90,7 @@ if trucks.lower() == "y":
 		</children>
 	</event>
             '''
-if os.path.isdir(f"{name}"):
+if os.path.exists(f"{name}"):
     shutil.rmtree(f'{name}')
 os.mkdir(f"{name}")
 with open(f"{name}\\{name}event.txt", "w") as f:
@@ -910,7 +910,13 @@ cargopgreen
                 kititems = "CargoPants_Grey"
             if kititems == "cargopgreen":
                 kititems = "CargoPants_Green"
-            
+            if kititems == "attachments":
+                with open(f"{name}\\{name}.txt", "r") as f:
+                    contents = f.read()
+                    f.close()
+                print(contents)
+                input("Press enter to continue...")
+                items()
             
             attachments = f'''
             <attachments>
